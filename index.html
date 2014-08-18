@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+            	<title>Login - 2098140284</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+                <link rel="stylesheet" type="text/css" href="loginstyles.css">
+</head>
+
+<!-- Header -->
+			<header id="header">
+
+<!-- Logo -->
+					<h1 id="logo"><a href="http://www.wezenbeekapps.com">Wezenbeek Apps</a></h1>
+				
+<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li>Login page for members</li>
+						</ul>
+					</nav>
+
+			</header>
+
+<body>
+
+<form name="login">
+<p class='username'>  
+<input type="text" class='usernameBox' placeholder="Username" name="userid"/>
+</p>
+<p class='password'>
+<input type="password" class='passwordBox' placeholder="Password" name="pswrd" maxlength="10"/>
+</p>
+
+<p class='buttons'>
+<input class='login' onclick="check(this.form)" value="Login" type="button"/>
+<input class='cancel' type="button" onclick="cancel(this.form)" value="Cancel"/>
+</p>
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+/*the following code checkes whether the entered userid and password are matching*/
+if(form.userid.value == "jandino" && form.pswrd.value == "judeska")
+{
+    alert("Correct... u wordt doorverwezen...")
+window.location.href="home.html"
+}else
+{
+alert("Verkeerde inloggegevens")/*displays error message*/
+form.userid.value = ""
+form.pswrd.value = ""
+}
+}
+</script>
+<script language="javascript">
+function cancel(form)/*function to check userid & password*/
+{
+history.go(-1)
+}
+</script>
+</body>
+</html>
